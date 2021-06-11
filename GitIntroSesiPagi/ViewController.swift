@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
     
+    @IBOutlet weak var myView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,6 +25,8 @@ class ViewController: UIViewController {
         myLabel.text = "Hello World."
         
         view.backgroundColor = .cyan
+        
+        myView.layer.cornerRadius = 10
     }
 
 }

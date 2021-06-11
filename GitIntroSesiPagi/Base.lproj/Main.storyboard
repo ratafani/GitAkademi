@@ -34,6 +34,7 @@
                     </view>
                     <connections>
                         <outlet property="myLabel" destination="vpF-Fy-qxO" id="rpp-tb-fsa"/>
+                        <outlet property="myView" destination="nyP-Vu-byj" id="xUa-Zb-IDQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
