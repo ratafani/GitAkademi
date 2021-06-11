@@ -17,10 +17,12 @@ class ViewController: UIViewController {
         print("loaded")
         
         myLabel.textColor = .white
-        myLabel.text = "Welcome"
+        
+        // change the label text
+        myLabel.text = "Hello World."
+        
         view.backgroundColor = .cyan
     }
-
 
 }
 
