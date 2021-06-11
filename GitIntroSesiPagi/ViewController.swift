@@ -13,16 +13,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myView: UIView!
     
+    var umurWorld  : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("loaded")
+        umurWorld = Int.random(in: 1...100)
         
         myLabel.textColor = .white
         
         // change the label text
-        myLabel.text = "Hello World."
+        myLabel.text = "Hello World. \(umurWorld ?? 0)"
         
         view.backgroundColor = .cyan
         
