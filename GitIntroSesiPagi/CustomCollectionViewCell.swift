@@ -19,5 +19,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
         
         // hide item
         cellLabel.text = item
+        
     }
 }
