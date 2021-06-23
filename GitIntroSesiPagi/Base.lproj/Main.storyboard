@@ -18,37 +18,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-cE-v6z">
-                                <rect key="frame" x="20" y="44" width="374" height="250"/>
+                                <rect key="frame" x="0.0" y="43.5" width="414" height="745"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CeI-Hj-4Jt">
-                                    <size key="itemSize" width="374" height="250"/>
+                                    <size key="itemSize" width="413" height="745"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Xtb-gj-k2U" customClass="CustomCollectionViewCell" customModule="GitIntroSesiPagi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="413" height="745"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NfQ-oo-Mr2">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="413" height="745"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8W-to-YVC">
-                                                    <rect key="frame" x="8" y="114.5" width="358" height="21"/>
+                                                    <rect key="frame" x="8" y="114.5" width="405" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="c8W-to-YVC" firstAttribute="leading" secondItem="NfQ-oo-Mr2" secondAttribute="leading" constant="8" id="B71-ne-sXg"/>
-                                                <constraint firstItem="c8W-to-YVC" firstAttribute="centerY" secondItem="NfQ-oo-Mr2" secondAttribute="centerY" id="BZC-On-Aux"/>
-                                                <constraint firstAttribute="trailing" secondItem="c8W-to-YVC" secondAttribute="trailing" constant="8" id="jRd-3m-2sr"/>
-                                                <constraint firstItem="c8W-to-YVC" firstAttribute="centerX" secondItem="NfQ-oo-Mr2" secondAttribute="centerX" id="q2N-LI-Qli"/>
+                                                <constraint firstItem="c8W-to-YVC" firstAttribute="top" secondItem="NfQ-oo-Mr2" secondAttribute="top" constant="114.5" id="52x-BC-gQy"/>
+                                                <constraint firstItem="c8W-to-YVC" firstAttribute="leading" secondItem="NfQ-oo-Mr2" secondAttribute="leading" constant="8" id="7wT-JW-fyv"/>
+                                                <constraint firstAttribute="trailing" secondItem="c8W-to-YVC" secondAttribute="trailing" id="lma-Fl-2ei"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="374" height="250"/>
+                                        <size key="customSize" width="413" height="745"/>
                                         <connections>
                                             <outlet property="cellLabel" destination="c8W-to-YVC" id="c2n-AL-5KA"/>
                                         </connections>
@@ -56,20 +55,19 @@
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pi3-iG-Apy">
-                                <rect key="frame" x="20" y="266.5" width="374" height="27.5"/>
+                                <rect key="frame" x="146.5" y="810.5" width="121.5" height="28"/>
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zd7-cE-v6z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ih7-n4-Db0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pi3-iG-Apy" secondAttribute="trailing" constant="20" id="M2D-Qh-wIW"/>
-                            <constraint firstItem="Pi3-iG-Apy" firstAttribute="centerX" secondItem="zd7-cE-v6z" secondAttribute="centerX" id="PhQ-tH-jEF"/>
-                            <constraint firstItem="zd7-cE-v6z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YcW-9L-noV"/>
-                            <constraint firstItem="Pi3-iG-Apy" firstAttribute="bottom" secondItem="zd7-cE-v6z" secondAttribute="bottom" id="bBc-UQ-6tW"/>
-                            <constraint firstItem="Pi3-iG-Apy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cZc-Yi-lAe"/>
-                            <constraint firstItem="zd7-cE-v6z" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.279018" id="pVF-qz-xNh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zd7-cE-v6z" secondAttribute="bottom" constant="73.5" id="66E-BC-Pb7"/>
+                            <constraint firstItem="zd7-cE-v6z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cgq-3Y-BZ2"/>
+                            <constraint firstItem="zd7-cE-v6z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GsU-mS-nUU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="zd7-cE-v6z" secondAttribute="top" constant="0.5" id="IhX-kN-Ypa"/>
+                            <constraint firstItem="Pi3-iG-Apy" firstAttribute="top" secondItem="zd7-cE-v6z" secondAttribute="bottom" constant="22" id="JKL-WG-KdP"/>
+                            <constraint firstItem="zd7-cE-v6z" firstAttribute="centerX" secondItem="Pi3-iG-Apy" secondAttribute="centerX" id="Zaa-X3-39w"/>
                         </constraints>
                     </view>
                     <connections>

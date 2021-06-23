@@ -106,12 +106,12 @@
 				F6930CC32672FB7C00C0E95C /* AppDelegate.swift */,
 				F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */,
 				F6930CC72672FB7C00C0E95C /* ViewController.swift */,
+				F66B3F5D2678100C00E9FFEC /* CustomCollectionViewCell.swift */,
 				F6930CC92672FB7C00C0E95C /* Main.storyboard */,
 				F6930CCF2672FB7E00C0E95C /* Assets.xcassets */,
 				F6930CD12672FB7E00C0E95C /* LaunchScreen.storyboard */,
 				F6930CD42672FB7E00C0E95C /* Info.plist */,
 				F6930CCC2672FB7C00C0E95C /* GitIntroSesiPagi.xcdatamodeld */,
-				F66B3F5D2678100C00E9FFEC /* CustomCollectionViewCell.swift */,
 			);
 			path = GitIntroSesiPagi;
 			sourceTree = "<group>";
