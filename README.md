@@ -1,6 +1,6 @@
 # GitAkademi
 
-This repo is created for the handsOn exercise bundle that i did within the academy workshop.
+This repo is created for the handsOn exercise bundle within the academy workshop.
 so if anyone whant to revisited the exercise, all the sourcecode is in 1 repo.
 
 to use this repo:
