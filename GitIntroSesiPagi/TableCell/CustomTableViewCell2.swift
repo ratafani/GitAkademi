@@ -17,6 +17,7 @@ class CustomTableViewCell2: UITableViewCell {
             updateUI()
         }
     }
+    
     func updateUI(){
         titleCell.text = zoomBackground.title
         imageCell.image = UIImage(named: zoomBackground.image)
