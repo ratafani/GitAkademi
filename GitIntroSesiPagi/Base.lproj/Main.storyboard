@@ -16,25 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpF-Fy-qxO">
-                                <rect key="frame" x="20" y="438" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nyP-Vu-byj">
-                                <rect key="frame" x="87" y="534" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YRT-hV-aho">
+                                <rect key="frame" x="23" y="45" width="368" height="292.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="F7l-K5-M2N"/>
+                                    <constraint firstAttribute="width" constant="368" id="Ynz-DM-rgC"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IJC-Bk-DIe">
+                                <rect key="frame" x="20" y="417" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rRR-Ib-SDC">
+                                <rect key="frame" x="20" y="479" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMn-cI-EEx">
+                                <rect key="frame" x="23" y="594" width="368" height="30"/>
+                                <state key="normal" title="Simpan"/>
+                                <connections>
+                                    <action selector="saveName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDg-10-gsh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YRT-hV-aho" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="64w-zr-sXN"/>
+                            <constraint firstItem="lMn-cI-EEx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="AJ9-Na-bkc"/>
+                            <constraint firstItem="lMn-cI-EEx" firstAttribute="top" secondItem="rRR-Ib-SDC" secondAttribute="bottom" constant="81" id="Eju-xp-aFM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rRR-Ib-SDC" secondAttribute="trailing" constant="20" id="FUe-db-qqj"/>
+                            <constraint firstItem="IJC-Bk-DIe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wpc-Rg-pc2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IJC-Bk-DIe" secondAttribute="trailing" constant="20" id="WyL-xV-vnN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YRT-hV-aho" secondAttribute="trailing" constant="23" id="X9u-zW-lrO"/>
+                            <constraint firstItem="rRR-Ib-SDC" firstAttribute="top" secondItem="IJC-Bk-DIe" secondAttribute="bottom" constant="28" id="Z3K-do-9ZL"/>
+                            <constraint firstItem="YRT-hV-aho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="hUY-yR-erR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lMn-cI-EEx" secondAttribute="trailing" constant="23" id="mj4-kf-f45"/>
+                            <constraint firstItem="IJC-Bk-DIe" firstAttribute="top" secondItem="YRT-hV-aho" secondAttribute="bottom" constant="78" id="nJ3-Yx-dsN"/>
+                            <constraint firstItem="rRR-Ib-SDC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wU9-kt-Bk7"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="myLabel" destination="vpF-Fy-qxO" id="rpp-tb-fsa"/>
-                        <outlet property="myView" destination="nyP-Vu-byj" id="xUa-Zb-IDQ"/>
+                        <outlet property="imageView" destination="YRT-hV-aho" id="TxC-TL-KLb"/>
+                        <outlet property="name1" destination="IJC-Bk-DIe" id="Hc1-k1-o17"/>
+                        <outlet property="name2" destination="rRR-Ib-SDC" id="c6S-ya-3L4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -43,11 +70,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
