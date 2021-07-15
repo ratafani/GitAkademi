@@ -15,9 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rwi-WE-SPa">
+                                <rect key="frame" x="143" y="384" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fxz-tu-izB">
+                                <rect key="frame" x="147" y="119" width="121" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="9S2-Lf-Z3z"/>
+                                    <constraint firstAttribute="width" constant="121" id="W8V-hF-Wzg"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Fade"/>
+                                    <segment title="Bounce"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fxz-tu-izB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="ahC-5C-zSY"/>
+                            <constraint firstItem="Fxz-tu-izB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="qv0-sI-bpC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="efSelection" destination="Fxz-tu-izB" id="c27-qh-QGQ"/>
+                        <outlet property="mCircle" destination="Rwi-WE-SPa" id="5et-LH-Nsx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
