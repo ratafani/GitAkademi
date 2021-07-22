@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     private let image : UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "example2")
+        image.image = UIImage(named: "example3")
         image.contentMode = .scaleAspectFill
         return image
     }()
