@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var names = ["tafa","taftaf","fani","bani","raba","tafani"]
     var umurWorld  : Int?
     
+    @IBOutlet weak var exampleBtn: UIButton!
     @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         
         pageController.numberOfPages = names.count
+        exampleBtn.isEnabled = false
         
         
     }
@@ -52,6 +54,11 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
         let w = scrollView.bounds.size.width
         let currentPage = Int(ceil(x/w))
         self.pageController.currentPage = currentPage
+        if currentPage == names.count-1{
+            exampleBtn.isEnabled = true
+        }else{
+            exampleBtn.isEnabled = false
+        }
     }
     
     //size cell

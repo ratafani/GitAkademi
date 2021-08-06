@@ -58,6 +58,11 @@
                                 <rect key="frame" x="146.5" y="810.5" width="121.5" height="28"/>
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFd-FE-4gf">
+                                <rect key="frame" x="339" y="810" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,6 +77,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="zd7-cE-v6z" id="vpx-Ft-p7S"/>
+                        <outlet property="exampleBtn" destination="oFd-FE-4gf" id="YGS-Od-7VI"/>
                         <outlet property="pageController" destination="Pi3-iG-Apy" id="C0S-w7-FHk"/>
                     </connections>
                 </viewController>
