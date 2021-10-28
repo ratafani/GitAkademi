@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9BED3171272A2DE800CD12F1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BED3170272A2DE800CD12F1 /* CloudKit.framework */; };
+		9BED3173272A57A500CD12F1 /* CloudkitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED3172272A57A500CD12F1 /* CloudkitManager.swift */; };
 		F6930CC42672FB7C00C0E95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC32672FB7C00C0E95C /* AppDelegate.swift */; };
 		F6930CC62672FB7C00C0E95C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */; };
 		F6930CC82672FB7C00C0E95C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC72672FB7C00C0E95C /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		9BED316E272A2DE400CD12F1 /* GitIntroSesiPagi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitIntroSesiPagi.entitlements; sourceTree = "<group>"; };
 		9BED3170272A2DE800CD12F1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		9BED3172272A57A500CD12F1 /* CloudkitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudkitManager.swift; sourceTree = "<group>"; };
 		F6930CC02672FB7C00C0E95C /* GitIntroSesiPagi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitIntroSesiPagi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6930CC32672FB7C00C0E95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				F6930CC32672FB7C00C0E95C /* AppDelegate.swift */,
 				F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */,
 				F6930CC72672FB7C00C0E95C /* ViewController.swift */,
+				9BED3172272A57A500CD12F1 /* CloudkitManager.swift */,
 				F6930CC92672FB7C00C0E95C /* Main.storyboard */,
 				F6930CCF2672FB7E00C0E95C /* Assets.xcassets */,
 				F6930CD12672FB7E00C0E95C /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6930CC82672FB7C00C0E95C /* ViewController.swift in Sources */,
+				9BED3173272A57A500CD12F1 /* CloudkitManager.swift in Sources */,
 				F6930CC42672FB7C00C0E95C /* AppDelegate.swift in Sources */,
 				F6930CCE2672FB7C00C0E95C /* GitIntroSesiPagi.xcdatamodeld in Sources */,
 				F6930CC62672FB7C00C0E95C /* SceneDelegate.swift in Sources */,
