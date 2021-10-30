@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1A2D13272D161600DCF088 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A2D12272D161600DCF088 /* Extention.swift */; };
+		9B1A2D16272D174C00DCF088 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 9B1A2D15272D174C00DCF088 /* FocusEntity */; };
+		9B1A2D18272D749E00DCF088 /* ConvexHull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A2D17272D749E00DCF088 /* ConvexHull.swift */; };
 		F6930CC42672FB7C00C0E95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC32672FB7C00C0E95C /* AppDelegate.swift */; };
 		F6930CC62672FB7C00C0E95C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */; };
 		F6930CC82672FB7C00C0E95C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC72672FB7C00C0E95C /* ViewController.swift */; };
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B1A2D12272D161600DCF088 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		9B1A2D17272D749E00DCF088 /* ConvexHull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvexHull.swift; sourceTree = "<group>"; };
 		F6930CC02672FB7C00C0E95C /* GitIntroSesiPagi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitIntroSesiPagi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6930CC32672FB7C00C0E95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1A2D16272D174C00DCF088 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +110,8 @@
 				F6930CC32672FB7C00C0E95C /* AppDelegate.swift */,
 				F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */,
 				F6930CC72672FB7C00C0E95C /* ViewController.swift */,
+				9B1A2D17272D749E00DCF088 /* ConvexHull.swift */,
+				9B1A2D12272D161600DCF088 /* Extention.swift */,
 				F6930CC92672FB7C00C0E95C /* Main.storyboard */,
 				F6930CCF2672FB7E00C0E95C /* Assets.xcassets */,
 				F6930CD12672FB7E00C0E95C /* LaunchScreen.storyboard */,
@@ -147,6 +155,9 @@
 			dependencies = (
 			);
 			name = GitIntroSesiPagi;
+			packageProductDependencies = (
+				9B1A2D15272D174C00DCF088 /* FocusEntity */,
+			);
 			productName = GitIntroSesiPagi;
 			productReference = F6930CC02672FB7C00C0E95C /* GitIntroSesiPagi.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +229,9 @@
 				Base,
 			);
 			mainGroup = F6930CB72672FB7C00C0E95C;
+			packageReferences = (
+				9B1A2D14272D174C00DCF088 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = F6930CC12672FB7C00C0E95C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,6 +278,8 @@
 				F6930CC82672FB7C00C0E95C /* ViewController.swift in Sources */,
 				F6930CC42672FB7C00C0E95C /* AppDelegate.swift in Sources */,
 				F6930CCE2672FB7C00C0E95C /* GitIntroSesiPagi.xcdatamodeld in Sources */,
+				9B1A2D18272D749E00DCF088 /* ConvexHull.swift in Sources */,
+				9B1A2D13272D161600DCF088 /* Extention.swift in Sources */,
 				F6930CC62672FB7C00C0E95C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B1A2D14272D174C00DCF088 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B1A2D15272D174C00DCF088 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B1A2D14272D174C00DCF088 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F6930CCC2672FB7C00C0E95C /* GitIntroSesiPagi.xcdatamodeld */ = {
