@@ -16,6 +16,8 @@ class ViewController: UIViewController,ARSessionDelegate{
     
     @IBOutlet weak var distanceLabel: UILabel!
     
+    public var focusSquare : FocusEntity!
+    var pathEntity : RKPathEntity!
     
     var i = 0
     var firstAnchor = SIMD3<Float>()
@@ -29,15 +31,27 @@ class ViewController: UIViewController,ARSessionDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        arView.session.delegate = self
+        
         distanceLabel.text = ""
         startPlaneDetection()
         
-        let focusSquare = FocusEntity(on: arView, focus: .classic)
-        focusSquare.scale = [0.5,0.5,0.5]
-        
-        let anchor = AnchorEntity(.camera)
-        anchor.addChild(focusSquare)
-        arView.scene.addAnchor(anchor)
+//        focusSquare = FocusEntity(on: arView, focus: .classic)
+        do {
+          let onColor: MaterialColorParameter = try .texture(.load(named: "Add"))
+          let offColor: MaterialColorParameter = try .texture(.load(named: "Open"))
+          self.focusSquare = FocusEntity(
+            on: arView,
+            style: .colored(
+              onColor: onColor, offColor: offColor,
+              nonTrackingColor: offColor
+            )
+          )
+        } catch {
+            self.focusSquare = FocusEntity(on: arView, focus: .classic)
+          print("Unable to load plane textures")
+          print(error.localizedDescription)
+        }
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapGesture(recognizer:)))
         
@@ -46,16 +60,16 @@ class ViewController: UIViewController,ARSessionDelegate{
     
     
     @objc func tapGesture(recognizer : UITapGestureRecognizer){
+        if let path = pathEntity {
+            self.arView.scene.removeAnchor(path)
+        }
+        
         if recognizer.state != .ended {
             return
         }
         i+=1
-        
-        guard let result = arView.raycast(from: view.center, allowing: .estimatedPlane, alignment: .horizontal).first else{
-            return
-        }
 
-        let position = result.worldTransform.simd_position
+        let position = self.focusSquare.position(relativeTo: nil)
         var ball = ModelEntity()
         
         if i%2==0{
@@ -63,11 +77,19 @@ class ViewController: UIViewController,ARSessionDelegate{
         }else{
             ball = crateEntity(color: .red)
         }
+        pathEntity = RKPathEntity(arView: arView,
+                                      path: listPoints,
+                                     width: 0.001,
+                                      materials: [UnlitMaterial.init(color: .green)])
         
-        let anchor = AnchorEntity(.plane(.horizontal, classification: .floor, minimumBounds: .zero))
+        let anchor = AnchorEntity(world: focusSquare.position)
+//        let anchor = AnchorEntity(
+//        let anchor = AnchorEntity(.pl)
         anchor.addChild(ball)
         
+        pathEntity.pathPoints.append(position)
         arView.scene.addAnchor(anchor)
+        
         
         listPoints.append(position)
         if i%2 == 1{
@@ -86,7 +108,6 @@ class ViewController: UIViewController,ARSessionDelegate{
             // Scene units map to meters in ARKit.
          
             distanceLabel.text = "Distance: " + formatter.string(from: NSNumber(value: distance))! + " cm"
-
         }
         
         if i>2{
@@ -107,20 +128,36 @@ class ViewController: UIViewController,ARSessionDelegate{
             
             print(area,convex.area())
             
-            distanceLabel.text = "Distance: " + formatter.string(from: NSNumber(value: distance))! + " m" + "\n Area: " + formatter.string(from: NSNumber(value: area))! + " cm2"
+            distanceLabel.text = "Distance: " + formatter.string(from: NSNumber(value: distance))! + " cm" + "\n Area: " + formatter.string(from: NSNumber(value: area))! + " cm2"
             
         }
         
     }
     
     func startPlaneDetection(){
-        arView.automaticallyConfigureSession = false
-        let config = ARWorldTrackingConfiguration()
         
-        config.planeDetection = [.horizontal]
-        config.environmentTexturing = .automatic
-        
-        arView.session.run(config)
+        if #available(iOS 13.4, *),
+            ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
+            let configuration = ARWorldTrackingConfiguration()
+            configuration.planeDetection = .horizontal
+            configuration.sceneReconstruction = .meshWithClassification
+            arView.session.run(configuration)
+            
+            //Allows objects to be occluded by the sceneMesh.
+            arView.environment.sceneUnderstanding.options.insert(.occlusion)
+            
+            //show colored mesh.
+            //self.arView.debugOptions.insert(.showSceneUnderstanding)
+        } else{
+            
+            arView.automaticallyConfigureSession = false
+            let config = ARWorldTrackingConfiguration()
+            
+            config.planeDetection = [.horizontal]
+            config.environmentTexturing = .automatic
+            
+            arView.session.run(config)
+        }
     }
 
     
@@ -134,6 +171,30 @@ class ViewController: UIViewController,ARSessionDelegate{
         return entity
     }
 
+    
+    
+    //delegate add anchor
+    
+    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+        if let planeAnchor = anchors.first as? ARPlaneAnchor,
+           planeAnchor.alignment == .vertical{
+            
+            //To make the mesh more precise, we could create an SCNScene from this geometry, save it to disk - converting it to usdz
+            //and then load it as a RealityKit entity and assign it an occlusion material.
+            
+            //using generatedPlane didn't work.
+            //let mesh = MeshResource.generatePlane(width: planeAnchor.extent.x, depth: planeAnchor.extent.y)
+            let mesh = MeshResource.generateBox(size: [planeAnchor.extent.x,
+                                                       planeAnchor.extent.y,
+                                                       planeAnchor.extent.z])
+            let occlusionPlane = ModelEntity(mesh: mesh,
+                                             materials: [OcclusionMaterial()])
+            let planeAnchor = AnchorEntity(anchor: planeAnchor)
+            arView.scene.addAnchor(planeAnchor)
+            planeAnchor.addChild(occlusionPlane)
+            print("ADDED VERTICAL PLANE")
+        }
+    }
 }
 
 
