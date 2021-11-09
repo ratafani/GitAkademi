@@ -33,10 +33,13 @@ class ViewController: UIViewController,ARSessionDelegate{
         
         arView.session.delegate = self
         
+//        arView.session.currentFrame?.lightEstimate?.ambientIntensity
+        //nilai minimum lux food candle = 1140
+        
+        
         distanceLabel.text = ""
         startPlaneDetection()
         
-//        focusSquare = FocusEntity(on: arView, focus: .classic)
         do {
           let onColor: MaterialColorParameter = try .texture(.load(named: "Add"))
           let offColor: MaterialColorParameter = try .texture(.load(named: "Open"))
