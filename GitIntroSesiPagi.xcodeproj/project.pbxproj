@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1BECD427506B920090C89B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1BECD327506B920090C89B /* DetailView.swift */; };
 		9B84635A269E7D3E00DC15C1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B846358269E7D3E00DC15C1 /* CustomTableViewCell.swift */; };
 		9B84635B269E7D3E00DC15C1 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B846359269E7D3E00DC15C1 /* CustomTableViewCell.xib */; };
 		9B84635E269E7D5900DC15C1 /* CustomTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84635C269E7D5900DC15C1 /* CustomTableViewCell2.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B1BECD327506B920090C89B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9B846358269E7D3E00DC15C1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		9B846359269E7D3E00DC15C1 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		9B84635C269E7D5900DC15C1 /* CustomTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell2.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				9B846357269E7D1500DC15C1 /* TableCell */,
 				F6930CC32672FB7C00C0E95C /* AppDelegate.swift */,
 				F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */,
+				9B1BECD327506B920090C89B /* DetailView.swift */,
 				F6930CC72672FB7C00C0E95C /* ViewController.swift */,
 				F6930CC92672FB7C00C0E95C /* Main.storyboard */,
 				F6930CCF2672FB7E00C0E95C /* Assets.xcassets */,
@@ -286,6 +289,7 @@
 				F6930CC82672FB7C00C0E95C /* ViewController.swift in Sources */,
 				9B84635A269E7D3E00DC15C1 /* CustomTableViewCell.swift in Sources */,
 				F6930CC42672FB7C00C0E95C /* AppDelegate.swift in Sources */,
+				9B1BECD427506B920090C89B /* DetailView.swift in Sources */,
 				F6930CCE2672FB7C00C0E95C /* GitIntroSesiPagi.xcdatamodeld in Sources */,
 				F6930CC62672FB7C00C0E95C /* SceneDelegate.swift in Sources */,
 				9B84635E269E7D5900DC15C1 /* CustomTableViewCell2.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -89,12 +90,21 @@ extension ViewController : UITableViewDelegate{
         if arrZoom[indexPath.row].highlight{
             arrZoom[indexPath.row].highlight.toggle()
 
-            UIView.transition(with: zoomTable, duration: 0.5, options: .transitionCrossDissolve) {
+            UIView.transition(with: zoomTable, duration: 0.5, options: .transitionCurlUp) {
                 self.zoomTable.reloadData()
             }
+            
+            let window = self.view.window
+            let nav = self.navigationController
+            
+            let swiftUIView = DetailView()
+                .environmentObject(AppData(window: window,navigation: nav))
+            
+            let hostingController = UIHostingController(rootView: swiftUIView)
+            
+            self.navigationController?.show(hostingController, sender: nil)
 
-
-            print(indexPath.row)
+            
             zoomTable.deselectRow(at: indexPath, animated: true)
         }else{
             zoomTable.deselectRow(at: indexPath, animated: true)
