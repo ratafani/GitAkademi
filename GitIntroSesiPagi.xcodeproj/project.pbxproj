@@ -11,6 +11,7 @@
 		9B84635B269E7D3E00DC15C1 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B846359269E7D3E00DC15C1 /* CustomTableViewCell.xib */; };
 		9B84635E269E7D5900DC15C1 /* CustomTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84635C269E7D5900DC15C1 /* CustomTableViewCell2.swift */; };
 		9B84635F269E7D5900DC15C1 /* CustomTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B84635D269E7D5900DC15C1 /* CustomTableViewCell2.xib */; };
+		F692D6E528617B7E00D010C2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F692D6E428617B7E00D010C2 /* DetailViewController.swift */; };
 		F6930CC42672FB7C00C0E95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC32672FB7C00C0E95C /* AppDelegate.swift */; };
 		F6930CC62672FB7C00C0E95C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */; };
 		F6930CC82672FB7C00C0E95C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6930CC72672FB7C00C0E95C /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		9B846359269E7D3E00DC15C1 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		9B84635C269E7D5900DC15C1 /* CustomTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell2.swift; sourceTree = "<group>"; };
 		9B84635D269E7D5900DC15C1 /* CustomTableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell2.xib; sourceTree = "<group>"; };
+		F692D6E428617B7E00D010C2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F6930CC02672FB7C00C0E95C /* GitIntroSesiPagi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitIntroSesiPagi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6930CC32672FB7C00C0E95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				F6930CC32672FB7C00C0E95C /* AppDelegate.swift */,
 				F6930CC52672FB7C00C0E95C /* SceneDelegate.swift */,
 				F6930CC72672FB7C00C0E95C /* ViewController.swift */,
+				F692D6E428617B7E00D010C2 /* DetailViewController.swift */,
 				F6930CC92672FB7C00C0E95C /* Main.storyboard */,
 				F6930CCF2672FB7E00C0E95C /* Assets.xcassets */,
 				F6930CD12672FB7E00C0E95C /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 				F6930CCE2672FB7C00C0E95C /* GitIntroSesiPagi.xcdatamodeld in Sources */,
 				F6930CC62672FB7C00C0E95C /* SceneDelegate.swift in Sources */,
 				9B84635E269E7D5900DC15C1 /* CustomTableViewCell2.swift in Sources */,
+				F692D6E528617B7E00D010C2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

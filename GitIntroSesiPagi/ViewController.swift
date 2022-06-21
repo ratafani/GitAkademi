@@ -97,6 +97,10 @@ extension ViewController : UITableViewDelegate{
             print(indexPath.row)
             zoomTable.deselectRow(at: indexPath, animated: true)
         }else{
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : DetailViewController = storyboard.instantiateViewController(withIdentifier: "detail") as! DetailViewController
+            vc.image = UIImage(named: arrZoom[indexPath.row].image)
+            self.navigationController?.show(vc, sender: nil)
             zoomTable.deselectRow(at: indexPath, animated: true)
         }
     }
