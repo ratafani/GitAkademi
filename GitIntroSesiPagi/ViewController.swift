@@ -13,12 +13,17 @@ class ViewController: UIViewController {
     
     var arrZoom: [ZoomBackground] = []
     
+    var viewcontrollers = [UIViewController]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         setupTable()
-        addData()
+        
+        for _ in 0...10{
+            addData()
+        }
         
         zoomTable.dataSource = self
         zoomTable.delegate = self
@@ -53,8 +58,9 @@ extension ViewController : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if arrZoom[indexPath.row].highlight{
-            let cell = zoomTable.dequeueReusableCell(withIdentifier: "custom2") as! CustomTableViewCell2
             
+            let cell = zoomTable.dequeueReusableCell(withIdentifier: "custom2") as! CustomTableViewCell2
+//            let cell = CustomTableViewCell2(style: .default, reuseIdentifier: "cell")
             cell.zoomBackground = arrZoom[indexPath.row]
             
             
@@ -80,7 +86,7 @@ extension ViewController : UITableViewDelegate{
         if arrZoom[indexPath.row].highlight{
             return zoomTable.frame.height / 4
         } else{
-            return zoomTable.frame.height / 8
+            return zoomTable.frame.height / 7
         }
     }
     
@@ -100,7 +106,10 @@ extension ViewController : UITableViewDelegate{
             let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc : DetailViewController = storyboard.instantiateViewController(withIdentifier: "detail") as! DetailViewController
             vc.image = UIImage(named: arrZoom[indexPath.row].image)
+            
             self.navigationController?.show(vc, sender: nil)
+            
+            viewcontrollers.append(vc)
             zoomTable.deselectRow(at: indexPath, animated: true)
         }
     }

@@ -18,10 +18,22 @@ class CustomTableViewCell: UITableViewCell {
     
     
     func updateUI(extending: @escaping ()->Void){
-        titleCell.text = zoomBackground.title
-        descCell.text = zoomBackground.detail
-        cellImage.image = UIImage(named: zoomBackground.image)
+//        titleCell.text = zoomBackground.title
+//        descCell.text = zoomBackground.detail
+        
+        UIView.animate(withDuration: 1, delay: 0.1, options: .curveEaseIn) {
+            self.titleCell.text = self.zoomBackground.title
+            self.descCell.text = self.zoomBackground.detail
+            self.cellImage.image = UIImage(named: self.zoomBackground.image)
+        }
+
+        
+        
+        
         cellImage?.layer.cornerRadius = 5
+        
+        
+        
         self.extending = extending
     }
     

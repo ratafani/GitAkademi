@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AgT-co-eKa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AgT-co-eKa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,23 +47,9 @@
                     <view key="view" contentMode="scaleToFill" id="RsR-IG-qik">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patung_jempol" translatesAutoresizingMaskIntoConstraints="NO" id="DVs-Qd-OdD">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LCC-aZ-Zml"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="DVs-Qd-OdD" firstAttribute="leading" secondItem="LCC-aZ-Zml" secondAttribute="leading" constant="20" id="8rG-tc-Kpu"/>
-                            <constraint firstItem="DVs-Qd-OdD" firstAttribute="top" secondItem="LCC-aZ-Zml" secondAttribute="top" id="GTr-2L-veV"/>
-                            <constraint firstItem="DVs-Qd-OdD" firstAttribute="bottom" secondItem="LCC-aZ-Zml" secondAttribute="bottom" id="PuD-Nm-00E"/>
-                            <constraint firstItem="LCC-aZ-Zml" firstAttribute="trailing" secondItem="DVs-Qd-OdD" secondAttribute="trailing" constant="20" id="RMV-Yr-7sB"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="DVs-Qd-OdD" id="grK-QB-UcC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlN-vD-6zU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +75,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="patung_jempol" width="650" height="379"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
